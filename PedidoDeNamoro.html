@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aceita</title>
+    <link rel="stylesheet" href="./paginaSim.html">
+    
+    
+    <style>
+        body{
+            background-color: red;
+            padding-top: 15px;
+           
+
+        }
+        .principal1 {  
+            padding: 10px;
+            margin: auto;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace, Arial, sans-serif;
+            border-radius: 20px 0px 20px 0px;
+            background-color: white;
+            padding-top: 20px;
+            width: 300px;
+            height: 800px;
+            
+        }
+        #sim{
+          
+          height: 40px;
+          width: 60px;
+          background-color: red;
+          border: 2px solid white;
+          border-radius: 10px;
+          color: white;
+          margin-left: -80px;
+        } 
+
+        #nao {
+           
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border:2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+        }
+        img {
+            size: 10px;
+        }
+        p {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: large;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body class="continua">
+    <div class="principal1">
+        <h1>Seja bem vinda!!</h1>
+        <img class="imagem" src="https://gifman.net/wp-content/uploads/2019/06/ursinho-fofo-apaixonado.gif" width="300" height="300" alt="">
+        <h2>Eu estava te esperando Giovana Japiassú </h2> 
+        <p> Podemos começar?</p>
+        
+        <a href="./paginaSim.html"><button  id="sim">SIM!</button></a>
+    
+        <button onclick="fuja()"  id="nao" >NÃO!</button>
+    </div>
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById( "nao")
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random()*maxX);
+            var aleatorioY = Math.floor(Math.random()*maxY)
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px"; }
+    </script>
+
+    
+</body>
+</html>
